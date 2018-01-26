@@ -1,0 +1,47 @@
+@charset "UTF-8";
+@import '../bower_components/breakpoint-sass/stylesheets/breakpoint';
+
+@import 'partials/colors';
+@import 'partials/vars';
+@import 'partials/mixins';
+@import 'partials/animations';
+@import 'partials/webfonts';
+@import 'partials/grid';
+@import 'partials/reset';
+@import 'partials/base';
+@import 'partials/helpers';
+@import 'partials/white-space';
+@import 'partials/svg-sprites';
+@import 'partials/typo';
+@import 'partials/buttons';
+
+@import 'layout/header';
+@import 'layout/nav'; 
+@import 'layout/layout';
+@import 'layout/footer'; 
+
+* {
+	@include webfont-text;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    @include webfont-text;
+    position: relative;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100%;
+    background: white;
+
+    p {
+    }
+
+    small {
+    }
+}

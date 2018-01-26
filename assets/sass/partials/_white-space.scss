@@ -1,0 +1,63 @@
+// margin
+.my-xxs {
+    @include my-xxs;
+}
+.my-xs {
+    @include my-xs;
+}
+.my-s {
+    @include my-xs;
+    @include breakpoint($phablet) {
+        @include my-s;
+    }
+}
+.my-m {
+    @include my-s;
+    @include breakpoint($phablet) {
+        @include my-m;
+    }
+}
+.my-l {
+    @include my-m;
+    @include breakpoint($phablet) {
+        @include my-l;
+    }
+}
+.my-xl {
+    @include my-l;
+    @include breakpoint($phablet) {
+        @include my-xl;
+    }
+}
+
+// padding
+.py-xxs {
+    @include py-xxs;
+}
+.py-xs {
+    @include py-xs;
+}
+.py-s {
+    @include py-xs;
+    @include breakpoint($phablet) {
+        @include py-s;
+    }
+}
+.py-m {
+    @include py-s;
+    @include breakpoint($phablet) {
+        @include py-m;
+    }
+}
+.py-l {
+    @include py-m;
+    @include breakpoint($phablet) {
+        @include py-l;
+    }
+}
+.py-xl {
+    @include py-l;
+    @include breakpoint($phablet) {
+        @include py-xl;
+    }
+}

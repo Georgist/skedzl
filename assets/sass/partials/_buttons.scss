@@ -1,0 +1,24 @@
+@mixin btn-base {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.btn {
+    @include btn-base;
+}
+
+.btn-primary {
+
+}
+
+.btn-alt {
+    
+}
+
+.btn-border {
+    
+}

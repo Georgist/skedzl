@@ -1,0 +1,26 @@
+/* gap values */ 
+$xxs: 0.5rem;
+$xs: 1rem;
+$s: 2rem;
+$m: 3rem;
+$l: 4rem;
+$xl: 6rem;
+
+/* breakpoint variables */
+@include breakpoint-set('no query fallbacks', true);
+$mobile-mini: 22.5em; // 360
+$mobile: 30em; // 480
+$phablet: 37.5em; // 600
+$tablet: 48em; // 768
+$laptop: 64em; // 1024
+$desktop: 80em; // 1280
+$retina: 100em; // 1600
+
+/* font weight */
+$black: 900;
+$bold: 700;
+$semibold: 600;
+$medium: 400;
+
+/* transitions */
+$cubic: ease-in-out;

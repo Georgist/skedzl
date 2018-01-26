@@ -1,0 +1,85 @@
+.cf {
+    @include cf;
+}
+
+.wf {
+    width: 100%;
+}
+
+.block { 
+    display: block !important; 
+}
+.inline-block { 
+    display: inline-block !important; 
+}
+.hidden { 
+    display: none !important; 
+}
+.flex {
+    display: flex;
+}
+
+.fl { 
+    float: left; 
+}
+.fr { 
+    float: right; 
+}
+
+.align-left { 
+    text-align: left; 
+}
+.align-right { 
+    text-align: right; 
+}
+.align-center { 
+    text-align: center; 
+}
+
+.fixed { 
+    position: fixed; 
+}
+.relative { 
+    position: relative; 
+}
+.absolute { 
+    position: absolute; 
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+// TODO
+.mobile-hide {
+    display: none !important;
+    @include breakpoint($phablet) {
+        display: inline-block !important;
+    }
+}
+
+.desktop-hide {
+    display: inline-block !important;
+    @include breakpoint($phablet) {
+        display: none !important;
+    }
+}
+
+.desktop-hide-block {
+    display: block !important;
+    @include breakpoint($phablet) {
+        display: none !important;
+    }
+}
+
+.desktop-hide-block {
+    display: block !important;
+    @include breakpoint($phablet) {
+        display: none !important;
+    }
+}
+
+// colors
+.c-brand {
+
+}
