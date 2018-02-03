@@ -12,9 +12,8 @@
 
     li {
         position: relative;
-        margin-bottom: 10px;
         cursor: pointer;
-        padding: 5px 0;
+        padding: 10px 0;
 
         &:hover {
             &::before {
@@ -23,6 +22,10 @@
         }
 
         &.is-selected {
+            .fc-checkbox-text {
+                color: $color-border;
+            }
+
             &::before,
             .fc-checkbox-icon::after {
                 opacity: 1;
