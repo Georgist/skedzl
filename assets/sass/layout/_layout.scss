@@ -1,25 +1,60 @@
 .page-wrapper {
-    max-width: 1000px;
+    max-width: 760px;
     margin: 0 auto;
 } 
 
 #container {
-
+    padding: 30px 15px;
 }
 
-.tasks-list {
+.task-list {
+    margin-top: 20px;
 
     li {
+        position: relative;
+        margin-bottom: 10px;
+        cursor: pointer;
+        padding: 5px 0;
 
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        &.is-selected {
+            &::before,
+            .fc-checkbox-icon::after {
+                opacity: 1;
+            }
+        }
+
+        &::before {
+            opacity: 0;
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            z-index: 5;
+            transform: translateY(-50%);
+            width: calc(100% - 21px);
+            height: 1px;
+            background-color: $color-border;
+            transition: opacity .2s ease-in-out;
+        }
     }
     
     label {
+        cursor: pointer;
+        padding: 10px 0;
 
         input[type=checkbox] {
-
+            display: inline-block;
+            margin-right: 12px;
+            margin-top: -3px;
         }
         span {
-            
+            letter-spacing: 1px;
         }
     }
 }

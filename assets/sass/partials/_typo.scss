@@ -1,6 +1,9 @@
 /* heading h1 */
 .h-main-1  {
     &, > a {
+        @include font-size(5.5, 7);
+        @include webfont-text-bold;
+        text-transform: uppercase;
     }
 }
 
