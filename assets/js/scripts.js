@@ -1,4 +1,5 @@
 var taskClass = {
+    array: [],
     init: function(){
         this.cacheDOM();
         this.clearChecked();
@@ -11,7 +12,10 @@ var taskClass = {
         this.checkbox = this.list.querySelectorAll('input[type=checkbox]');
     },
     storeChecked: function() {
-
+        this.itemAttr = this.getAttribute('data-index');
+        if(_.includes(this.array, this.itemAttr)) {
+            localStorage.setItem('item-index', this.itemAttr);
+        }
     },
     clearChecked: function() {
 
@@ -21,9 +25,10 @@ var taskClass = {
             taskClass.item[i].addEventListener('click', function(e) {
                 this.classList.toggle('is-selected');
                 e.preventDefault();
+                /* set index to localstorage */
+                this.storeChecked();
             });
             taskClass.item[i].setAttribute('data-index', [i]);
-            this.storeChecked();
         }
     }
 };
