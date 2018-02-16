@@ -1,6 +1,11 @@
 var taskClass = {
     dataField: [],
     init: function(){
+        /* get values from localStorage on page load */
+        this.storageData = localStorage.getItem('checked-items');
+        if(this.storageData !== null) {
+            this.dataField = JSON.parse(this.storageData);
+        }
         this.cacheDOM();
         this.addListeners();
     },
@@ -9,8 +14,6 @@ var taskClass = {
         this.item = this.list.querySelectorAll('li');
         this.label = this.list.querySelectorAll('label');
         this.checkbox = this.list.querySelectorAll('input[type=checkbox]');
-    },
-    initChecked: function(){
     },
     addListeners: function(){
         for (var i = 0; i < this.item.length; i++) {
@@ -33,7 +36,6 @@ var taskClass = {
                     /* set json to localstorage */
                     localStorage.setItem('checked-items', JSON.stringify(taskClass.dataField));
                 }
-                // this.storeChecked();
             });
         }
     }
