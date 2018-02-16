@@ -8,6 +8,7 @@ $xl: 6rem;
 
 /* breakpoint variables */
 @include breakpoint-set('no query fallbacks', true);
+$mobile-only: 22.5em; // 360
 $mobile-mini: 22.5em; // 360
 $mobile: 30em; // 480
 $phablet: 37.5em; // 600

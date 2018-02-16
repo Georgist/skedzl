@@ -1,9 +1,12 @@
 /* heading h1 */
 .h-main-1  {
     &, > a {
-        @include font-size(5.5, 7);
+        @include font-size(4.5, 6);
         @include webfont-text-bold;
         text-transform: uppercase;
+        @include breakpoint($mobile) {
+            @include font-size(5.5, 7);
+        }
     }
 }
 

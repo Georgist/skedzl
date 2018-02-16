@@ -15,9 +15,11 @@
         cursor: pointer;
         padding: 10px 0;
 
-        &:hover {
-            &::before {
-                opacity: 1;
+        @include breakpoint($mobile) {
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
             }
         }
 
