@@ -15,6 +15,9 @@
         <main id="content">  
             <div class="page-wrapper">
                 <h1 class="h-main-1 align-center">Skedzl</h1>
+                <div class="task-list-counter">
+                    <span class="js-count-current">-</span>&nbsp;&#47;&nbsp;<span class="js-count-total">-</span>
+                </div>
                 <ul class="task-list js-task-list">
                     <li>
                         <label for="checkbox-1" class="fc-checkbox">
@@ -42,6 +45,20 @@
                             <input type="checkbox" id="checkbox-4">
                             <span class="fc-checkbox-icon"></span>
                             <span class="fc-checkbox-text">Item 4</span>
+                         </label>
+                    </li>
+                    <li>
+                        <label for="checkbox-5" class="fc-checkbox">
+                            <input type="checkbox" id="checkbox-5">
+                            <span class="fc-checkbox-icon"></span>
+                            <span class="fc-checkbox-text">Item 5</span>
+                         </label>
+                    </li>
+                    <li>
+                        <label for="checkbox-5" class="fc-checkbox">
+                            <input type="checkbox" id="checkbox-5">
+                            <span class="fc-checkbox-icon"></span>
+                            <span class="fc-checkbox-text">Item 5</span>
                          </label>
                     </li>
                     <li>

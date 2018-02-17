@@ -8,12 +8,13 @@ var taskClass = {
         }
         this.cacheDOM();
         this.addListeners();
+        this.setCounters();
     },
     cacheDOM: function(){
         this.list = document.querySelector('.js-task-list');
         this.item = this.list.querySelectorAll('li');
-        this.label = this.list.querySelectorAll('label');
-        this.checkbox = this.list.querySelectorAll('input[type=checkbox]');
+        this.counter = document.querySelector('.js-count-current');
+        this.counterTotal = document.querySelector('.js-count-total');
     },
     addListeners: function(){
         for (var i = 0; i < this.item.length; i++) {
@@ -36,7 +37,16 @@ var taskClass = {
                     /* set json to localstorage */
                     localStorage.setItem('checked-items', JSON.stringify(taskClass.dataField));
                 }
+                taskClass.counter.textContent = taskClass.dataField.length;
             });
+        }
+    },
+    setCounters: function() {
+        if(this.dataField !== []) {
+            this.counter.textContent = this.dataField.length;
+        }
+        if(this.item !== null) {
+            this.counterTotal.textContent = this.item.length;
         }
     }
 };
