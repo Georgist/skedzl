@@ -55,17 +55,17 @@
                          </label>
                     </li>
                     <li>
-                        <label for="checkbox-5" class="fc-checkbox">
-                            <input type="checkbox" id="checkbox-5">
+                        <label for="checkbox-6" class="fc-checkbox">
+                            <input type="checkbox" id="checkbox-6">
                             <span class="fc-checkbox-icon"></span>
-                            <span class="fc-checkbox-text">Item 5</span>
+                            <span class="fc-checkbox-text">Item 6</span>
                          </label>
                     </li>
                     <li>
-                        <label for="checkbox-5" class="fc-checkbox">
-                            <input type="checkbox" id="checkbox-5">
+                        <label for="checkbox-7" class="fc-checkbox">
+                            <input type="checkbox" id="checkbox-7">
                             <span class="fc-checkbox-icon"></span>
-                            <span class="fc-checkbox-text">Item 5</span>
+                            <span class="fc-checkbox-text">Item 7</span>
                          </label>
                     </li>
                 </ul>
