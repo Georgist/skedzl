@@ -11,10 +11,39 @@
 .task-list {
     margin-top: 20px;
 
+    .h-main-4 {
+        letter-spacing: 2px;
+        display: block;
+        position: relative;
+        > span {
+            @include webfont-text-bold;
+            color: rgba($color-brand, .7);
+            display: inline-block;
+            background: white;
+            padding: 5px 10px 5px 0;
+        }
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            z-index: -1;
+            transform: translateY(-50%);
+            border-bottom: 1px solid rgba($color-brand, .8);
+        }
+
+        &:not(:first-child) {
+            margin-top: 25px;
+            margin-bottom: -5px;
+        }
+    }
+
     li {
         position: relative;
         cursor: pointer;
-        padding: 10px 0;
+        padding: 5px 0;
 
         @include breakpoint($mobile) {
             &:hover {

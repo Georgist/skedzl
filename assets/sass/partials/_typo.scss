@@ -25,6 +25,8 @@
 /* heading h4 */
 .h-main-4 {
     &, > a {
+        @include font-size(1.35, 1.8);
+        text-transform: uppercase;
     }
 }
 
