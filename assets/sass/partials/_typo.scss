@@ -25,8 +25,11 @@
 /* heading h4 */
 .h-main-4 {
     &, > a {
-        @include font-size(1.35, 1.8);
+        @include font-size(1.15, 1.7);
         text-transform: uppercase;
+        @include breakpoint($mobile) {
+            @include font-size(1.35, 1.8);
+        }
     }
 }
 
