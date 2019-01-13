@@ -1,6 +1,8 @@
-var gulp = require('gulp');
-var gulpLoadPlugins = require('gulp-load-plugins');
-var plugins = gulpLoadPlugins();
+var gulp = require('gulp'),
+    gulpLoadPlugins = require('gulp-load-plugins'),
+    plugins = gulpLoadPlugins(),
+    browserSync = require('browser-sync').create(),
+    reload = browserSync.reload;
 
 // paths congif
 var path = {
@@ -8,9 +10,9 @@ var path = {
     cssDest: '../public/css',
     jsSrc: './js/**/*.js',
     jsDest: '../public/js'
-}
+};
 
-// console.log(Object.keys(plugins))
+// console.log(Object.keys(plugins));
 
 // compile sass files
 gulp.task('sass:compile', function() {
@@ -38,6 +40,6 @@ gulp.task('js:compile', function() {
 
 // default task watcher
 gulp.task('default', function() {
-    gulp.watch(path.sassSrc, ['sass:compile']);
-    gulp.watch(path.jsSrc, ['js:compile']);
+    gulp.watch(path.sassSrc, gulp.series('sass:compile'));
+    gulp.watch(path.jsSrc, gulp.series('js:compile'));
 });

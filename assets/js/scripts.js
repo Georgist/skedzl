@@ -10,7 +10,7 @@ var taskClass = {
         this.addListeners();
         this.setCounters();
     },
-    cacheDOM: function(){
+    cacheDOM: function () {
         this.list = document.querySelector('.js-task-list');
         this.item = this.list.querySelectorAll('li');
         this.counter = document.querySelector('.js-count-current');
